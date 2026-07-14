@@ -3,6 +3,10 @@ import json
 from rich.console import Console
 
 class PreventEngine:
+    """
+    Applies active defense techniques, including fake honey-tokens and stripping identity traces
+    from network and application service responses.
+    """
     def __init__(self, console: Console):
         self.console = console
 
@@ -27,6 +31,7 @@ class PreventEngine:
 
     def obfuscate_headers(self, service_type: str = "http") -> dict:
         self.console.print(f"[info][*][/info] Formulating response header obfuscation map for service: [accent]{service_type}[/accent]")
+        
         obfuscation_map = {
             "Server": "Apache/2.4.41 (Unix)",
             "X-Powered-By": "Redacted/SecuredByNetleak",
@@ -34,5 +39,6 @@ class PreventEngine:
             "X-Frame-Options": "SAMEORIGIN",
             "Server-Timing": "Disabled"
         }
+        
         self.console.print("[success][+][/success] Obfuscation schema generated successfully. Apply these headers inside your reverse-proxy layers.")
         return obfuscation_map

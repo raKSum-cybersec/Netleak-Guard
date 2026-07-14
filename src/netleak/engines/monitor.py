@@ -4,6 +4,10 @@ from rich.console import Console
 from rich.table import Table
 
 class MonitorEngine:
+    """
+    Handles active and simulated sniffing operations on local interfaces to identify
+    unencrypted text headers, credentials, SSIDs, and general metadata leakage.
+    """
     def __init__(self, console: Console):
         self.console = console
         self.active_sniffing = False
@@ -22,6 +26,7 @@ class MonitorEngine:
     def run_live_monitor(self, duration_sec: int = 5):
         self.console.print("[info][*] Binding live engine stream to socket loops... Press Ctrl+C to abort early.[/info]")
         self.active_sniffing = True
+        
         try:
             start_time = time.time()
             packet_count = 0
@@ -29,6 +34,7 @@ class MonitorEngine:
                 time.sleep(0.5)
                 packet_count += 8
                 self.console.print(f"[success][+][/success] Sniffed {packet_count} packets... Checking protocol headers for leaky metadata.", end="\r")
+            
             self.console.print(f"\n[success][+][/success] Complete. Analyzed {packet_count} total frames.")
         except KeyboardInterrupt:
             self.console.print("\n[warning][!] Capturing halted by operator choice.[/warning]")

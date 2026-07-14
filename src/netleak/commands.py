@@ -8,9 +8,8 @@ from netleak.engines.prevent import PreventEngine
 class CommandProcessor:
     def __init__(self, console):
         self.console = console
-        self.context = ""  # Updates context status globally
+        self.context = ""
         
-        # Instantiate core system engines
         self.monitor_engine = MonitorEngine(self.console)
         self.limit_engine = LimitEngine(self.console)
         self.prevent_engine = PreventEngine(self.console)
