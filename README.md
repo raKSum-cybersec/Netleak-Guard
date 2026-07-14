@@ -69,7 +69,7 @@ netleak-guard/
             ├── __init__.py
             ├── banners.py # Cypher-themed ASCII splash graphics
             └── styles.py  # Rich UI style color mapping profiles
-
+```
 ```markdown
 ---
 
@@ -92,12 +92,12 @@ The system relies on two critical runtime visual frameworks:
    cd netleak-guard
    python3 -m venv .venv
    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-
+   ```
 ### Perform a Clean Package Injection (Development/Editable Mode):
 Using editable installation ensures that code modifications update the system execution pathways instantly without requiring re-installation:
     ```bash
     pip install --upgrade pip
     pip install -e .
-
+    ```
 ## ⚖️ License
 Distributed under the MIT License. See LICENSE inside the repository root for more information.
