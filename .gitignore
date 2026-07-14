@@ -1,0 +1,54 @@
+# === Python Caches & Compiled bytecode ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# === Virtual Environments ===
+.venv/
+venv/
+ENV/
+env/
+active_env/
+
+# === IDEs, Editors & OS Metadata ===
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Testing & Coverage ===
+.tox/
+.nosetests
+.coverage
+.htmlcov
+.pytest_cache/
+nosetests.xml
+coverage.xml
+htmlcov/
+
+# === Local Runtime & Honey-tokens (Safety) ===
+# This ensures decoy tokens generated locally during testing aren't pushed to GitHub
+aws_credentials_decoy.json
+netleak-guard.zip
