@@ -70,9 +70,6 @@ netleak-guard/
             ├── banners.py # Cypher-themed ASCII splash graphics
             └── styles.py  # Rich UI style color mapping profiles
 ```
-```markdown
----
-```
 ## ⚙️ Installation & Environment Setup
 
 ### 📋 Prerequisites
