@@ -94,6 +94,8 @@ The system relies on two critical runtime visual frameworks:
 Using editable installation ensures that code modifications update the system execution pathways instantly without requiring re-installation:
     ```bash
     pip install --upgrade pip
+    ```
+    ```bash
     pip install -e .
     ```
 ## ⚖️ License
