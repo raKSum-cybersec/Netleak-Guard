@@ -88,15 +88,13 @@ The system relies on two critical runtime visual frameworks:
    ```bash
    git clone [https://github.com/raKSum/netleak-guard.git](https://github.com/raKSum/netleak-guard.git)
    cd netleak-guard
-   python3 -m venv .venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    ```
 
 2. **Isolate Your Python Workspace Environment**
     
     ```bash
-    python -m venv venv
-    source venv/bin/activate
+   python3 -m venv .venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
     ```
 
 3. **Perform a Clean Package Injection (Development/Editable Mode):**
