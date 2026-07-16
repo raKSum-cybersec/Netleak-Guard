@@ -84,21 +84,32 @@ The system relies on two critical runtime visual frameworks:
 ### 🔧 Step-by-Step Deployment
 
 1. **Clone the Upstream Repository:**
+   
    ```bash
    git clone [https://github.com/raKSum/netleak-guard.git](https://github.com/raKSum/netleak-guard.git)
    cd netleak-guard
    python3 -m venv .venv
    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    ```
-### Perform a Clean Package Injection (Development/Editable Mode):
-Using editable installation ensures that code modifications update the system execution pathways instantly without requiring re-installation:
-    ```bash
-    pip install --upgrade pip
-    ```
 
+2. **Isolate Your Python Workspace Environment**
     
     ```bash
+    python -m venv venv
+    source venv/bin/activate
+    ```
+
+3. **Perform a Clean Package Injection (Development/Editable Mode):**
+Using editable installation ensures that code modifications update the system execution pathways instantly without requiring re-installation:
+    
+    ```bash
+    pip install --upgrade pip
     pip install -e .
     ```
+4. **Launch the Engine Workspace:**
+    ```bash
+    netleak
+    ```
+
 ## ⚖️ License
 Distributed under the MIT License. See LICENSE inside the repository root for more information.
