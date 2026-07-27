@@ -12,6 +12,32 @@ Co-developed as a collaborative partnership between **raKSum** and **Gemini (AI 
 
 ---
 
+## 🔑 Privilege Requirements
+
+**Most of NetLeak Guard's real functionality requires root (Linux/macOS) or Administrator (Windows) privileges.** The console will launch and run without elevation, but the following commands need it to actually do anything:
+
+| Command | Needs root/admin? | Why |
+| :--- | :--- | :--- |
+| `inspect ports` / `inspect live` | Partial | Works unprivileged, but processes you don't own show as `[access denied]` — run elevated to resolve every PID. |
+| `monitor start` | **Yes** | Raw packet capture (via `scapy`) requires opening raw sockets, which the OS restricts to elevated processes. |
+| `limit apply` / `limit revert` | **Yes** | Modifies live firewall rules (`iptables` / Windows Firewall) and writes to the system hosts file. |
+| `prevent deploy` | No | Writes a decoy file and watches it in userspace — no elevation needed. |
+
+If a command needs privileges it doesn't have, NetLeak Guard will tell you explicitly (e.g. *"Raw packet capture requires elevated privileges"*) rather than silently doing nothing or faking results.
+
+**Run elevated:**
+```bash
+# Linux / macOS
+sudo netleak
+
+# Windows (from an Administrator PowerShell/Command Prompt)
+netleak
+```
+
+⚠️ Because `limit apply` edits real firewall rules and your hosts file, only run it elevated when you actually intend to apply those changes — the console will ask for confirmation first either way.
+
+---
+
 ## 🚀 Core Architectural Engines
 
 All engines act on real, live system state — no simulated output.
@@ -88,12 +114,18 @@ netleak-guard/
 
 ### 📋 Prerequisites
 * **Python Configuration:** Python 3.10 or higher.
-* **System Privileges:** `monitor start` (raw packet capture) and `limit apply` (firewall rules / hosts file) require root on Linux/macOS or Administrator on Windows. `inspect` and `prevent` work fine unprivileged, though `inspect` may show `[access denied]` for processes you don't own without elevation.
+* **System Privileges:** See [🔑 Privilege Requirements](#-privilege-requirements) above — `monitor start` and `limit apply`/`limit revert` require root/Administrator; `inspect` and `prevent` work unprivileged.
 
 ### 📦 Mandatory Library Dependencies
-The system relies on two critical runtime visual frameworks:
+The system relies on these runtime frameworks:
 1. **`prompt_toolkit`** — Manages cursor preservation, live multi-level inputs, and command-history retrieval logs without resetting shell loops.
 2. **`rich`** — Renders color-coded terminal telemetry, structured tables, loader icons, and multi-stage progress bars.
+3. **`psutil`** — Powers the `inspect` engine's real process ↔ port ↔ connection mapping.
+4. **`scapy`** — Powers the `monitor` engine's live packet capture (needs root/admin — see [🔑 Privilege Requirements](#-privilege-requirements)).
+5. **`watchdog`** — Watches honey-token decoy files for real access events in the `prevent` engine.
+6. **`pyfiglet`** — Generates procedural ASCII splash art variety on boot.
+
+All are installed automatically via `pip install -e .` below.
 
 ### 🔧 Step-by-Step Deployment
 
