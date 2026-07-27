@@ -1,0 +1,6 @@
+[bold green]  ______________________________________________________ [/bold green]
+[bold green] / [bold white]NETLEAK GUARD V0.2.0[/bold white]                             \ [/bold green]
+[bold green]|  ------------------------------------------------------  |[/bold green]
+[bold green]|  [bold white]Monitoring Mode : ACTIVE[/bold white]                            |[/bold green]
+[bold green]|  [bold white]Defensive Shields: STANDBY[/bold white]                          |[/bold green]
+[bold green] \______________________________________________________/ [/bold green]

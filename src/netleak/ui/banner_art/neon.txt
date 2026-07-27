@@ -1,0 +1,7 @@
+[bold cyan]    _   _  _____ _____  _      _____  ___   _   _ [/bold cyan]
+[bold cyan]   | \ | || ___|_   _|| |    |  ___|/ _ \ | | | |[/bold cyan]
+[bold blue]   |  \| || |__   | |  | |    | |__ / /_\ \| | | |[/bold blue]
+[bold blue]   | . ` ||  __|  | |  | |    |  __||  _  || | | |[/bold blue]
+[bold magenta]   | |\  || |___  | |  | |____| |___| | | || |_| |[/bold magenta]
+[bold magenta]   \_| \_/\____/  \_/  \_____/\____/\_| |_/ \___/ [/bold magenta]
+      [bold white] --- Security Footprint & Network Leak Guard --- [/bold white]

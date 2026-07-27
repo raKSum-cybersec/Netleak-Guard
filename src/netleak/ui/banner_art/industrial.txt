@@ -1,0 +1,7 @@
+[bold red]  ███╗   ██╗███████╗████████╗██╗     ███████╗ █████╗ ██╗  ██╗[/bold red]
+[bold red]  ████╗  ██║██╔════╝╚══██╔══╝██║     ██╔════╝██╔══██╗██║ ██╔╝[/bold red]
+[bold yellow]  ██╔██╗ ██║█████╗     ██║   ██║     █████╗  ███████║█████╔╝ [/bold yellow]
+[bold yellow]  ██║╚██╗██║██╔══╝     ██║   ██║     ██╔══╝  ██╔══██║██╔═██╗ [/bold yellow]
+[bold magenta]  ██║ ╚████║███████╗   ██║   ███████╗███████╗██║  ██║██║  ██╗[/bold magenta]
+[bold magenta]  ╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝[/bold magenta]
+      [bold white]  NETWORK TELEMETRY SHIELDING & DECOY CONTROL  [/bold white]

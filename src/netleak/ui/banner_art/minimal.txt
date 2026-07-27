@@ -1,0 +1,4 @@
+[bold violet]   ┌────────────────────────────────────────────────────────┐[/bold violet]
+[bold violet]   │ [/bold violet][bold white]netleak-guard[/bold white] [bold grey]v0.2.0[/bold grey]                                   [bold violet]│[/bold violet]
+[bold violet]   │ [/bold violet][bold cyan]An active CLI tracking defense framework. [/bold cyan]              [bold violet]│[/bold violet]
+[bold violet]   └────────────────────────────────────────────────────────┘[/bold violet]
